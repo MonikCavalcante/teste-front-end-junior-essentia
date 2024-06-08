@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Essentia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            }
+        header {
+            background-color: #000000;
+            color: #000000;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header nav {
+            display: inline-block;
+            font-weight: 400;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            position: relative;
+        }
+
+      
+        header nav a::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -20px; 
+            width: 2px; 
+            background-color: #fff; 
+        }
+
+      
+        header nav a:last-child::after {
+            display: none;
+        }
+        .capsule-section {
+            text-align: center;
+            background-color: #ffffff;
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .capsule-img {
+            width: 100%;
+            max-width: 375px;
+            height: 667px;
+            background: transparent url('img/fotoomega.png') center center no-repeat;
+            background-size: cover;
+            opacity: 1;
+            margin: auto;
+            margin-top: -20px;
+        }
+
+        .info-section {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: justify;
+           
+        }
+
+        .info-text {
+            text-align: left;
+            letter-spacing: 0px;
+            margin-bottom: -10px;
+            margin-top: -20px;
+        }
+
+        .info-text1 {
+            color: #333333;
+            font-weight: bold;
+            font-size: 21px;
+            
+        }
+        
+        .info-text2 {
+            color: #666666;
+            font-size: 17px;
+            text-align: justify;
+        }
+
+        .info-text3 {
+            color: #7C68B5;
+            text-align: justify;
+        }
+
+        .photo-section {
+            text-align: center;
+            margin-bottom:-20px;
+            
+           
+        }
+
+        .photo-img img{
+        width: 100%;
+        max-width: 375px;
+        height: 300px;
+        background: transparent;
+        background-size: cover;
+        opacity: 1;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .photo-img1{
+        width: 100%;
+        width: 375px;
+        height: 430px;
+        background: transparent;
+        background-size: cover;
+        opacity: 1;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .content-section {
+            height: 450px;
+            background-color: #141414;
+            padding: 20px;
+            text-align: justify;
+            color: #FFFFFF;
+            
+           
+        }
+
+        .content-title {
+            color: #FFFFFF;
+            text-align: left;
+            letter-spacing: 0px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .content-text {
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #FFFFFF;
+            color: #141414;
+            border-radius: 5px;
+            width: 70%; 
+            max-width: 500px; 
+            height: 60px; 
+            text-align: center;
+            line-height: 60px; 
+            margin: 20px left;
+            display: block;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 600;
+            
+            
+        }
+        .button a {
+            color: inherit; 
+            text-decoration: none; 
+            display: block; 
+            height: 100%; 
+            line-height: 60px;
+            cursor: pointer; 
+        }
+
+        .extra-section {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-around; 
+            height: 500px;
+            background-color:#EDEDED;
+        }
+
+        .highlight-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            width: 45%; 
+            max-width: 200px; 
+            margin-top: 30px;
+        }
+
+        .highlight-circle {
+            width: 90px;
+            height: 90px;
+            border: 2px solid #7C68B5;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .highlight-circle1 {
+            width: 90px;
+            height: 90px;
+            border: 2px solid #7C68B5;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .text-circle {
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            text-align: center;
+        }
+
+        .subtext,
+        .subtext1 {
+            color: #141414;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+        }
+        .new-section {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            margin-top: 50px;
+        }
+
+        .text1, .text2 {
+           
+            width: 315px;
+            text-align: left;
+            color: #333333;
+            opacity: 1;
+            margin-bottom: 20px; 
+        }
+
+        .text1 {
+            
+            top: 2134px;
+            left: 26px;
+            height: 39px;
+            letter-spacing: 0px;
+            text-transform: uppercase;
+        }
+
+        .text2 {
+           
+            top: 2197px;
+            left: 48px;
+            height: 61px;
+            font-size:  17px;
+            letter-spacing: -0.34px;
+        }
+
+        .text2 ul {
+            
+            padding: 0; 
+        }
+
+        .text2 li {
+            margin-left: 20px; 
+        }
+
+        .ponto-lateral {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #7C68B5;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .image-section {
+        position: relative;
+        text-align: center;
+        margin-top: 20px;
+        }
+
+        .image-section img {
+        width: 100%;
+        width: 375px;
+        height: 308px;      
+        background: transparent;
+        background-size: cover;
+        opacity: 1;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .text-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .text01 {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: -0.32px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            opacity: 1;
+        }
+
+        .text02 {
+            margin-top: 10px;
+            font-size: 21px;
+            font-weight: 900;
+            letter-spacing: -0.42px;
+            color: #7C68B5;
+            text-transform: uppercase;
+            opacity: 1;
+        }
+
+        .whey-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .whey-content {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .whey-image img {
+        max-width: 100%;
+        height: 200px;
+        width: 200px;
+        display: block;
+        margin-right: 20px;
+    }
+
+    .whey-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .main-text {
+        text-align: left;
+        letter-spacing: NaNpx;
+        opacity: 1;
+        color: #7C68B5;
+        font-size: 30px;
+    }
+
+    .small-text1 {
+        letter-spacing: 0px;
+        color: #333333;
+        margin-top: -15px;
+    }
+
+
+    .flavors {
+        text-align: left;
+        letter-spacing: 0px;
+        color: #000000;
+        margin-top: 5px;
+        text-align: justify;
+    }
+
+    .composition {
+        text-align: left;
+        letter-spacing: 0px;
+        color: #333333;
+        opacity: 1;
+        margin-top: 20px;
+        margin-right: 200px; 
+    }
+
+    .composition-list {
+        text-align: left;
+        letter-spacing: 0px;
+        color: #333333;
+        opacity: 1;
+        margin-top: 10px;
+        list-style: none;
+        padding-left: 0; 
+        margin-left: 30px;
+    }
+
+    .composition-list li::before {
+        content: '• ';
+        color: #7C68B5;
+    }
+    .image-section-omegabrain {
+        width: 100%;
+        
+        max-width: 375px;
+        height: 300px;
+        background: transparent url('img/fotoomega2.png') 0% 0% no-repeat padding-box;
+        opacity: 1;
+        margin: 20px auto;
+    }
+
+    .options-section {
+        background-color: #000000;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .main-text {
+        color: #7C68B5;
+        letter-spacing: -0.42px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .sub-text {
+        color: #FFFFFF;
+        margin-bottom: 20px;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .option-button {
+        background: #FFFFFF;
+        color: #141414;
+        border: none;
+        border-radius: 4px;
+        width: 121px;
+        height: 46px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    .options-section {
+        background-color: #000000;
+        padding: 20px;
+        text-align: center;
+        margin-top: -20px;
+    }
+
+    .main-text {
+        color: #7C68B5;
+        letter-spacing: -0.42px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .sub-text {
+        color: #FFFFFF;
+        margin-bottom: 10px;
+    }
+
+    .divider {
+        width: 244px; 
+        height: 2px;
+        background-color: #7C68B5;
+        margin: 0 auto 20px auto;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .option-button {
+        background: #FFFFFF;
+        color: #141414;
+        border: none;
+        border-radius: 4px;
+        width: 121px;
+        height: 46px;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: 600;
+    }
+    .option-button a{
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        cursor: pointer;
+    }
+
+    .endurance-section {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .endurance-text {
+        flex: 1; 
+        text-align: center; 
+    
+    }
+
+    .endurance-image {
+        flex: 1; 
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    .endurance-image img {
+        width: 138px;
+        height: 163px;
+        margin-left: 40px;
+        
+    }
+
+    .endurance-text {
+        flex: 1; 
+        text-align: left;
+        margin-right: 70px; 
+    }
+
+    .endurance-text p {
+        color: #7C68B5;
+        letter-spacing: 0px;
+        
+        opacity: 1;
+        margin: 0;
+        margin-bottom: 5px; 
+        margin-left: 40px;
+    }
+
+    .endurance-section .original-price {
+        color: #333333;
+        margin-left: 40px;
+    }
+
+
+    .original-price::after {
+        content: '195,00';
+        text-decoration: line-through;
+        
+    }
+
+    .discount-price {
+        background-color: #847F7A;
+        color: #FFFFFF;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: 40px;
+        font-weight: 500;
+    }
+
+    .buy-link {
+        color: #7C68B5;
+        text-decoration: underline;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-left: 40px; 
+        
+    }
+
+    .buy-link a{
+        text-decoration: none;
+        color: inherit;
+    }
+    .last-hours-section {
+        position: relative;
+        width: 100%;
+        height: 220px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .background-image {
+        width: 100%;
+        height: 100%;
+        background: url('img/fotofinal.png') 0% 0% no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+    }
+
+    .last-hours-text {
+        color: #7C68B5;
+        letter-spacing: 0px;
+        opacity: 1;
+    }
+
+    .ver-todos-button {
+        margin-top: 10px;
+        width: 181px;
+        height: 32px;
+        background: #FFFFFF;
+        border: none;
+        border-radius: 4px;
+        color: #141414;
+        letter-spacing: 0px;
+        text-align: center;
+        cursor: pointer;
+        font-weight: 600;
+    }
+    .ver-todos-button a{
+        text-decoration: none;
+        color: inherit;
+    }
+
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="https://www.essentialnutrition.com.br/">Home</a>
+        <a href="https://www.essentialnutrition.com.br/produtos/lancamentos">Lançamentos</a>
+        <a href="https://www.essentialnutrition.com.br/customer/account/login/">Login</a>
+    </nav>
+</header>
+
+<div class="capsule-section">
+    <div class="capsule-img"></div>
+</div>
+
+<div class="info-section">
+    <p class="info-text">
+        <span class="info-text1">Olá, tudo bem?</span> <br> <br>
+        <span class="info-text2">Uma ótima alternativa para essa situação é abordar a </span>
+        <span class="info-text3">relação do ômega-3 com o bom funcionamento do nosso cérebro. 
+        <br>
+        <br>
+        <span class="info-text3">60% da estrutura cerebral</span>
+        <span class="info-text2">é formada por gorduras e 
+        <span class="info-text3">20% dessa quantidade representa o DHA,</span>
+        <span class="info-text2">um ácido graxo que faz parte da composição do ômega-3.</span>
+    </p>
+</div>
+
+<div class="photo-section">
+    <div class="photo-img">
+        <img src="img/capsulamao.png" alt="">
+    </div>
+</div>
+
+<div class="content-section">
+    <h2 class="content-title">ÔMEGA-3 E OUTROS NUTRIENTES PARA O CÉREBRO</h2>
+    <p class="content-text">Entre os ácidos graxos que compõem o ômega-3, o 
+        <span class="info-text3"> DHA</span> 
+        é o que tem 
+        <span class="info-text3"> mais facilidade de ser absorvido </span>
+        pelo nosso cérebro.
+         <br>
+         <br>
+         Para entender um pouco mais sobre essa relação e ainda descobrir outros hábitos que podem ajudar na 
+         <span class="info-text3">saúde cerebral</span>
+         , acesse o artigo no nosso blog!</p>
+    <div class="button"> <a href="https://www.essentialnutrition.com.br/conteudos/">ACESSAR CONTEÚDO</a></div>
+</div>
+
+
+<div class="extra-section">
+    <div class="highlight-box">
+        <div class="highlight-circle">
+            <div class="text-circle">150mg</div>
+        </div>
+        <div class="subtext">Cafeína <br> Natural</div>
+    </div>
+    <div class="highlight-box">
+        <div class="highlight-circle1">
+            <div class="text-circle">150mg</div>
+        </div>
+        <div class="subtext1">Fosfatildserina</div>
+    </div>
+    <div class="highlight-box">
+        <div class="highlight-circle">
+            <div class="photo-img1" style="background: transparent url('img/icon1.png') center center no-repeat; background-size: 60%;"></div>
+        </div>
+        <div class="subtext">Extrato de Gengibre <br> Tailandês</div>
+    </div>
+    <div class="highlight-box">
+        <div class="highlight-circle">
+            <div class="photo-img1" style="background: transparent url('img/icon2.png') center center no-repeat; background-size: 60%;"></div>
+        </div>
+        <div class="subtext">Óleos de peixe <br>e de Krill</div>
+    </div>
+</div>
+
+<div class="new-section">
+    <div class="text1">PROTEÍNAS: O SUPLEMENTO MAIS CONSUMIDO POR ESPORTISTAS.</div>
+    <div class="text2">
+        <div class="ponto-lateral"></div> Ganho de massa magra<br>
+        <div class="ponto-lateral"></div> Melhora na composição corporal<br>
+        <div class="ponto-lateral"></div> Saciedade
+    </div>
+</div>
+
+<div class="image-section">
+    <img src="img/fotoproteina.png" >
+
+    <div class="text-container">
+        <div class="text01">VOCÊ CONHECE AS DIFERENÇAS ENTRE AS PROTEÍNAS?</div>
+        <div class="text02">VEM DESCOBRIR AS OPÇÕES DA NOSSA LINHA.</div>
+    </div>
+</div>
+<div class="whey-section">
+    <div class="whey-content">
+        <div class="whey-image">
+            <img src="img/fotocacao.png" alt="">
+        </div>
+        <div class="whey-text">
+            <p class="main-text">Whey Protein</p>
+            <p class="small-text1">22g PROTEÍNA</p>
+            <p class="flavors"><strong>Sabores</strong></p>
+            <p class="flavors">Cacau, Açaí com Banana, Cappuccino, Frutas <br> Vermelhas, Café Espresso, Baunilha, Abacaxi com <br> Água de Coco e Neutro</p>
+        </div>
+    </div>
+    <p class="composition"><strong>Composição</strong></p>
+    <ul class="composition-list">
+        <li>Proteínas hidrolisada e isolada do soro de leite (WPH e WPI)</li>
+        <li>Peptídeos de colágeno Peptan®</li>
+        <li>BCAA naturalmente em sua composição</li>
+        <li>Adoçantes naturais</li>
+    </ul>
+</div>
+
+<div class="image-section-omegabrain"></div>
+
+
+<div class="options-section">
+    <p class="main-text">VEM DESCOBRIR AS OPÇÕES DA NOSSA LINHA.</p>
+    <p class="sub-text">Disponível em dois sabores:</p>
+    <div class="divider"></div>
+    <div class="button-container">
+        <button class="option-button"><a href="https://www.essentialnutrition.com.br/collagen-2-joint-neutro-lata">NEUTRO</a></button>
+        <button class="option-button"><a href="https://www.essentialnutrition.com.br/collagen-2-joint-limao-siciliano-lata">LIMÃO</a></button>
+    </div>
+</div>
+
+<div class="endurance-section">
+    <div class="endurance-image">
+        <img src="img/fotomulher.png" alt="">
+    </div>
+    <div class="endurance-text">
+        <p>ENDURANCE AND RECOVERY</p>
+        <p class="original-price">De: R$ </p>
+        <button class="discount-price">Por: R$ 165,75</button>
+        <br>
+        <a href="#" class="buy-link"><a href="https://www.essentialnutrition.com.br/carbpro-4-1-citrus">Comprar</a></a>
+    </div>
+</div>
+
+
+<div class="last-hours-section">
+    <div class="background-image"></div>
+    <div class="overlay"></div>
+    <div class="content">
+        <p class="last-hours-text">ÚLTIMAS HORAS PARA <br>APROVEITAR!</p>
+        <button class="ver-todos-button"><a href="https://www.essentialnutrition.com.br/produtos">VER TODOS</a></button>
+    </div>
+</div>
+
+</body>
+</html>
